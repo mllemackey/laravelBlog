@@ -7,7 +7,12 @@ use App\User;
 
 class RegisterController extends Controller
 {
+	public function __construct(){
+		$this->middleware('guest');
+	}
+
     public function create(){
+    		
     	return view('register.create');
     }
 
@@ -22,7 +27,7 @@ class RegisterController extends Controller
         $user = new User;
         $user->name = request('name');
         $user->email = request('email');
-        $user->password = request('password');
+        $user->password = bcrypt(request('password'));
 
         $user->save();
 
