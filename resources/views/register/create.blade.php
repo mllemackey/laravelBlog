@@ -21,6 +21,11 @@
         </div>
 
         <div class="form-group">
+            <label for="age">Age</label>
+            <input type="text" class="form-control" id="age" name="age">
+        </div>
+
+        <div class="form-group">
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" name="password">
         </div>
